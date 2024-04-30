@@ -1,3 +1,3 @@
-module github.com/george-zakharov/redmine_time_manager_notepad
+module redmine-time-manager-notepad
 
-go 1.21.3
+go 1.21
