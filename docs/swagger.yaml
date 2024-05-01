@@ -1,0 +1,70 @@
+definitions:
+  main.HTTPError:
+    properties:
+      message:
+        type: string
+    type: object
+info:
+  contact:
+    email: george_zakharov@mail.ru
+    name: George Zakharov
+  description: Redmine Notepad
+  title: Redmine Notepad
+paths:
+  /:
+    get:
+      consumes:
+      - '*/*'
+      description: Get the status of this service.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/main.HTTPError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/main.HTTPError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/main.HTTPError'
+      summary: Show the status of this service.
+      tags:
+      - rotator
+  /health:
+    get:
+      consumes:
+      - '*/*'
+      description: Get the status of this service.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/main.HTTPError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/main.HTTPError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/main.HTTPError'
+      summary: Show the status of this service.
+      tags:
+      - rotator
+schemes:
+- http
+swagger: "2.0"
